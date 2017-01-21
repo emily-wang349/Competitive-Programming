@@ -44,5 +44,4 @@ int main()
         g++;
     }
     cout << "Martha plays " << g << " times before going broke.";
-    cout<< "hi";
 }
