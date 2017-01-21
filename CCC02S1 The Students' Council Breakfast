@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int p,g,r,o,m;
+int c, mini;
+int main()
+{
+    cin >> p >> g >> r >> o >> m;
+    int c=0;
+
+    int d = m;
+    mini = 10000000;
+    for (int i = 0; i<=m; i++)
+    {
+        for (int j = 0; j<=m; j++)
+        {
+            for (int k = 0; k<=m; k++)
+            {
+                for (int z = 0; z<=m; z++)
+                {
+                    d-=p*i;
+                    d-=g*j;
+                    d-=r*k;
+                    d-=o*z;
+                    if (d==0)
+                    {
+                        c++;
+                        mini = min(mini, i+j+k+z);
+                        cout << "# of PINK is "<<i<<" # of GREEN is "<<j<<" # of RED is "<<k<<" # of ORANGE is "<<z<<"\n";
+                    }
+                    d=m;
+                }
+            }
+        }
+    }
+    cout << "Total combinations is "<<c<<"."<<"\n";
+
+    cout << "Minimum number of tickets to print is "<<mini<<". \n";
+
+}
