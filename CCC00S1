@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int q, a, b, c;
+
+    cin >> q >> a >> b >> c;
+
+    int g = 0;
+    int s = 1;
+    while (q!=0)
+    {
+        q--;
+        if (s == 1)
+        {
+            a++;
+            s=2;
+        }
+        else if (s == 2)
+        {
+            b++;
+            s=3;
+        }
+        else if (s == 3)
+        {
+            c++;
+            s=1;
+        }
+        if (a==35)
+        {
+            q+=30;
+            a=0;
+        }
+        if (b==100)
+        {
+            b=0;
+            q+=60;
+        }
+        if (c==10)
+        {
+            q+=9;
+            c=0;
+        }
+        g++;
+    }
+    cout << "Martha plays " << g << " times before going broke.";
+    cout<< "hi";
+}
