@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main (){
+
+int n, m;
+cin >> n >>m;
+
+if (n/m!=0)
+cout << n/m<< " ";
+
+int a = n - n/m*m;
+
+if (a!=0){
+for (int i = 2; i<m; i++){
+    if (a%i ==0 && m % i ==0){
+        a/=i;
+        m/=i;
+    }
+}
+cout << a << "/"<<m<<"\n";
+}
+}
