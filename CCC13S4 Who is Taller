@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, m;
+vector <int> ppl[1000000];
+bool BFS (int x, int y)
+{
+    bool vis [n+1];
+    for (int i = 0; i<=n; i++)
+    {
+        vis[i] = false;
+    }
+
+    queue<int> q;
+    q.push(x);
+    vis[x]=true;
+
+    int u = 0;
+    while(!q.empty())
+    {
+        int cur = q.front();
+        q.pop();
+        for(int i =0; i<ppl[cur].size(); i++)
+        {
+            if (!vis[ppl[cur].at(i)])
+            {
+                q.push(ppl[cur].at(i));
+                vis[ppl[cur].at(i)] =true;
+            }
+        }
+    }
+
+    if (!vis[y])
+    {
+        return false;
+    }
+    return true;
+}
+int main ()
+{
+    cin >> n >>m;
+    for (int i =0; i<m; i++)
+    {
+        int x,y;
+        cin >> x >>y;
+        ppl[x].push_back(y);
+    }
+    int a,b;
+    cin >>a>>b;
+    if (BFS(a,b))
+    {
+        cout <<"yes \n";
+    }
+    else if (BFS(b,a))
+    {
+        cout<<"no \n";
+    }
+    else
+        cout <<"unknown \n";
+}
