@@ -1,0 +1,37 @@
+import java.util.*;
+
+class ccc96s1 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args[]) {
+    
+    int n;
+      n = input.nextInt();
+      
+    int [] list = new int [n];
+
+    
+    for (int i=0; i<n; i++)
+    {
+      list [i] = input.nextInt();
+    }
+    
+    for (int i=0; i<n; i++)
+    {
+      int sum =0;
+      for (int j=1; j<list[i]; j++)
+      {
+      if (list [i]%j==0)
+        sum += j;
+      }
+      
+      if (sum >list [i])
+        System.out.println(list [i]+" is an abundant number.");
+      else if (sum ==list [i])
+        System.out.println(list [i]+" is a perfect number.");
+      else if (sum <list [i])
+        System.out.println(list [i]+" is a deficient number.");
+    }
+ 
+  }
+}
