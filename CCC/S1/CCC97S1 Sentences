@@ -1,0 +1,50 @@
+import java.util.*;
+
+class ccc97s1{
+  
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args[]) {
+    
+    
+    int a, b, c, d;
+    
+    a=input.nextInt();
+        
+    for (int q=0; q<a; q++)
+    {
+    b=input.nextInt();
+    c=input.nextInt();
+    d=input.nextInt();
+    String []sub = new String [b];
+    String []ad = new String [c];
+    String []ob = new String [d];
+    
+    input.nextLine();
+    
+    for (int i=0; i<b; i++)
+    {
+      sub [i] = input.nextLine();
+      
+    }
+    
+    
+    for (int i=0; i<c; i++)
+      ad [i] = input.nextLine();
+    
+    for (int i=0; i<d; i++)
+      ob [i] = input.nextLine();
+
+      for (int k=0; k<b; k++)
+      {
+        for (int o=0; o<c; o++)
+        {
+          for (int x=0; x<d; x++)
+          {
+            System.out.println(sub [k]+" "+ad[o]+" "+ob [x]+".");
+          }
+        }
+      }
+    }
+  }
+}
