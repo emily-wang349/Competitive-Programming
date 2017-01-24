@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+    int n;
+    cin >> n;
+
+    bool pr = false;
+    if (n==1)
+        cout << 2;
+    else
+    {
+        if (n%2==0 && n!=2)
+        {
+            n++;
+        }
+
+        while (!pr)
+        {
+            pr = true;
+            for (int i= 2; i<=sqrt(n); i++)
+            {
+                if (n%i==0)
+                {
+                    pr = false;
+                }
+            }
+            if(!pr)
+                n++;
+        }
+        cout << n;
+    }
+}
