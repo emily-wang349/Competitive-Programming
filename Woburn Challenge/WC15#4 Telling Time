@@ -1,0 +1,21 @@
+import java.util.*;
+public class wc154j1 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner (System.in);
+		
+		int n = input.nextInt();
+		int g = input.nextInt();
+		
+		int c = 0;
+		for (int i = 0; i< n; i++){
+			int a = input.nextInt();
+			if (a%g==0)
+				c++;
+		}
+		System.out.println(c);
+
+	}
+
+}
