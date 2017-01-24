@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+int matrix[2002][2002];
+bool visited [2002];
+int n, m, a, b;
+bool BFS (int x, int y){
+  visited[x] = true;
+  queue<int> Q;
+  Q.push(x);
+  
+  while (!Q.empty()){
+    int cur = Q.front();
+    Q.pop();
+    for (int i = 1; i <= n; i++)
+    {
+      if(matrix[cur][i]==1 && !visited[i]){
+        Q.push(i);
+        visited[i] = true;
+      }
+    }
+  }
+  return visited[y];
+}
+
+int main() {
+  cin >> n >> m >> a >> b;
+  
+  for (int i = 0; i< m; i++)
+  {
+    int x, y;
+    cin >> x >> y;
+    matrix[x][y] = 1;
+    matrix [y][x] = 1;
+  }
+  if (BFS(a,b)){
+    cout << "GO SHAHIR!";
+  }
+  else
+  cout << "NO SHAHIR!";
+}
