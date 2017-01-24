@@ -1,0 +1,32 @@
+import java.util.*;
+
+class ccc05j2 {
+  
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[]) {
+    
+  int a, b;
+  a=input.nextInt();
+  b=input.nextInt();
+  int counter;
+  int rsa=0;
+  
+  for (int i=a; i<=b; i++)
+  {
+    counter=0;
+    for (int j=1; j<=i; j++)
+    {
+      if(i%j==0)
+        counter++;
+    }
+    if (counter==4)
+      rsa++;
+  }
+  
+  
+  System.out.println("The number of RSA numbers between "+a+" and "+b+" is "+rsa);
+  
+  
+}
+}
