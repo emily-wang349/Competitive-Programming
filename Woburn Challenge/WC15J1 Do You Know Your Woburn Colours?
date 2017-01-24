@@ -1,0 +1,24 @@
+import java.util.*;
+
+class wc151j1 {
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    String a = input.nextLine();
+    String b = input.nextLine();
+    
+    if (a.equals("RED") && b.equals("BLUE"))
+      System.out.println("WHITE");
+    else if (a.equals("RED") && b.equals("WHITE"))
+      System.out.println("BLUE");
+    else if (a.equals("BLUE") && b.equals("RED"))
+      System.out.println("WHITE");
+    else if (a.equals("BLUE") && b.equals("WHITE"))
+      System.out.println("RED");
+    else if (a.equals("WHITE") && b.equals("BLUE"))
+      System.out.println("RED");
+    else
+      System.out.println("BLUE");
+  }
+}
