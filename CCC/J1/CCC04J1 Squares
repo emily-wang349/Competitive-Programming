@@ -1,0 +1,14 @@
+import java.util.*;
+
+class ccc04j1 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args [])
+  {
+    int n = input.nextInt();
+    int a  = (int) Math.sqrt(n);
+    
+    System.out.println("The largest square has side length "+a+".");
+        
+  }
+}
