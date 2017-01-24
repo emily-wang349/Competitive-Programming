@@ -1,0 +1,19 @@
+import java.util.*;
+public class pot {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner (System.in);
+		
+		int n = s.nextInt();
+		int c = 0;
+		for (int i= 0; i<n; i++){
+			int a = s.nextInt();
+			int t1 = a / 10;
+
+			double t2 = ((double)a/10-t1)*10;
+			c+=Math.pow(t1, Math.round(t2));
+		}
+		System.out.println(c);
+	}
+
+}
