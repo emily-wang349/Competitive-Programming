@@ -1,0 +1,16 @@
+import java.util.*;
+public class wc161j1 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner (System.in);
+		
+		int n =s.nextInt();
+		System.out.print("sp");
+		for (int i = 0; i<n; i++){
+			System.out.print("o");
+		}
+		System.out.print("ky");
+		
+	}
+
+}
