@@ -1,0 +1,75 @@
+import java.util.*;
+
+public class acmtryouts2d {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int n = input.nextInt();
+
+		String item[] = new String[n];
+
+		input.nextLine();
+		for (int i = 0; i < n; i++)
+			item[i] = input.nextLine();
+
+		String fw = "";
+		int index = 0;
+		int words = 0;
+
+		for (int i = 0; i < n; i++) {
+			item[i] = item[i].toLowerCase();
+
+			if (item[i].contains(" "))
+				fw = item[i].substring(0, item[i].indexOf(" "));
+
+			else 
+				fw = item[i];
+
+			words = countWords(item[i]);
+
+			index = fw.length();
+			String[] arr = item[i].split(" ");
+
+
+				if (fw.equals("of") && words == 2)
+					System.out.println("Rare");
+
+				else if (index >= 2 && fw.substring(index - 2, index).equals("'s"))
+					System.out.println("Set");
+
+
+				else if (fw.equals("damaged"))
+					System.out.println("Normal");
+				
+				else if (words == 3 && arr[1].equals("of"))
+
+					System.out.println("Magic");
+
+				else if (words == 4 && arr[2].equals("of"))
+					System.out.println("Magic");
+
+
+				else if (words == 2)
+					System.out.println("Not sure, take anyways");
+
+				else
+					System.out.println("Normal");
+			}
+		}
+	
+
+	// word count method//
+	public static int countWords(String str) {
+		int count = 0;
+		for (int e = 0; e < str.length(); e++) {
+			if (str.charAt(e) != ' ') {
+				count++;
+				while (str.charAt(e) != ' ' && e < str.length() - 1) {
+					e++;
+				}
+			}
+		}
+		return count;
+	}
+}
