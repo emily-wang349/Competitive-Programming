@@ -1,0 +1,15 @@
+import java.util.*;
+
+class coci062p1 {
+  
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args [])
+  {
+    int a, b;
+    a = input.nextInt();
+    b = input.nextInt();
+    
+    System.out.println(b*2-a);
+  }
+}
