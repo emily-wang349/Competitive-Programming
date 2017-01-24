@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+    int v, f, g;
+
+
+    cin >> v >> f >>g;
+
+    double d = (double) f/g;
+    double c = (double) v * (1+d);
+    cout << c;
+}
