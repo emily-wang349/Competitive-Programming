@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+
+public class americanadian {
+
+	public static void main(String[] args) {
+		Scanner s  = new Scanner (System.in);
+		
+		while(true){
+		String word = s.nextLine();
+		if (word.equals("quit!"))
+			break;
+		int n = word.length();
+		if (n>4 && word.substring(n-2, n).equals("or")){
+			if (word.charAt(n-3)!='a' && word.charAt(n-3)!='e'&& word.charAt(n-3)!='i'&& word.charAt(n-3)!='o'&& word.charAt(n-3)!='u')
+			word = word.substring(0,n-2)+"our";
+			
+		}
+		System.out.println(word);
+		}
+	}
+
+}
