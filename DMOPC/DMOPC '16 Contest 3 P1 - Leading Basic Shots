@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int n;
+    string s;
+    int n2;
+
+    cin >> n >> s >> n2;
+
+
+
+    if (s.compare("Infront")==0){
+        cout << n-n2;
+    }
+    else
+        cout << n+n2;
+}
