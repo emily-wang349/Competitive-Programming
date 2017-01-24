@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class avatarearth{
+  
+  public static void main(String args[]) {
+    
+    Scanner myScanner = new Scanner(System.in);
+    int x, y, x1, y1, x2, y2;
+    int counter=0;
+    x = myScanner.nextInt();
+    y = myScanner.nextInt();
+    x1 = myScanner.nextInt();
+    y1 = myScanner.nextInt();
+    x2 = myScanner.nextInt();
+    y2 = myScanner.nextInt();
+    
+    if ((x>= x1 && x<=x2) || (x<= x1 && x>=x2))
+      counter++;
+    if ((y>= y1 && y<=y2) || (y<= y1 && y>=y2))
+      counter ++;
+      
+      if (counter==2)
+      System.out.println("Yes");
+    else 
+      System.out.println("No");
+    
+  }
+  
+}
