@@ -1,0 +1,14 @@
+import java.util.*;
+class p79ex5{
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+    int a = input.nextInt();
+    int b = input.nextInt();
+    
+    if (a%b==0)
+      System.out.println("yes");
+    else
+      System.out.println("no");
+  }
+}
