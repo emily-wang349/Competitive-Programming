@@ -1,0 +1,42 @@
+#include <iostream>
+
+int main(int argc, char** argv) {
+	#include <iostream>
+#include <string>
+using namespace std;
+
+	string input;
+	do {
+		
+	cin >> input;
+	if (input.compare("CU")==0)
+	cout <<"see you"<<'\n';
+	else if (input.compare(":-)")==0)
+	cout << "I'm happy" << '\n';
+	else if (input.compare(":-(")==0)
+	cout << "I'm unhappy" << '\n';
+	else if (input.compare(";-)")==0)
+	cout << "wink" << '\n';
+	else if (input.compare(":-P")==0)
+	cout << "stick out my tongue" << '\n';
+		else if (input.compare("(`.`)")==0)
+	cout << "sleepy" << '\n';
+		else if (input.compare("TA")==0)
+	cout << "totally awesome" << '\n';
+		else if (input.compare("CCC")==0)
+	cout << "Canadian Computing Competition" << '\n';
+		else if (input.compare("CUZ")==0)
+	cout << "because" << '\n';
+		else if (input.compare("TY")==0)
+	cout << "thank-you" << '\n';
+		else if (input.compare("YW")==0)
+	cout << "you're welcome'" << '\n';
+	else if (input.compare("TTYL")==0)
+	cout <<"talk to you later";
+	else
+	cout <<input<<'\n';
+	}while(input.compare("TTYL")!=0);
+	
+
+	return 0;
+}
