@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class ccc01j1
+{
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    int a = input.nextInt();
+    
+    int x=a;
+    int d=a-(x-3);
+    
+    for (int i=0; i<a/2; i++)
+    {
+      int b = x*2-2;   
+      int c = (a*2-b)/2;
+      for (int j=0; j<c; j++)
+        System.out.print("*");
+      for (int j=0; j<b; j++)
+        System.out.print(" ");
+      for (int j=0; j<c; j++)
+        System.out.print("*");
+      System.out.println(" ");
+      x-=2;
+    }
+    for (int i=0; i<a*2; i++)
+      System.out.print("*");
+    System.out.println(" ");
+    
+    for (int i=0; i<a/2; i++)
+    {
+      int v = d*2-2;
+      int o = (a*2-v)/2;
+      for (int j=0; j<o; j++)
+        System.out.print("*");
+      for (int j=0; j<v; j++)
+        System.out.print(" ");
+      for (int j=0; j<o; j++)
+        System.out.print("*");
+      System.out.println(" ");
+      d+=2;
+    }
+    
+  }
+}
