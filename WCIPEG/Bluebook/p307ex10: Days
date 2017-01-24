@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class p307ex10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		int n = input.nextInt();
+		for (int i = 0; i < n; i++) {
+			int a = input.nextInt();
+			int b = input.nextInt();
+			int c = input.nextInt();
+			if (a % 4 == 0 && b >= 3) {
+				c++;
+			}
+			if (b == 1)
+				System.out.println(c);
+			else if (b == 2)
+				System.out.println(c + 31);
+			else if (b == 3)
+				System.out.println(c + 59);
+			else if (b == 4)
+				System.out.println(c + 90);
+			else if (b == 5)
+				System.out.println(c + 120);
+			else if (b==6)
+				System.out.println(c+151);
+			else if (b==7)
+				System.out.println(c+181);
+			else if (b==8)
+				System.out.println(c+212);
+			else if (b==9)
+				System.out.println(c+243);
+			else if (b==10)
+				System.out.println(c+273);
+			else if (b==11)
+				System.out.println(c+304);
+			else if (b==12)
+				System.out.println(c+334);
+
+		}
+	}
+
+}
