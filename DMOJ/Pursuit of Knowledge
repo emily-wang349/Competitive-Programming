@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, m, t, q;
+vector<int> a[1001];
+void BFS (int x, int y)
+{
+    bool vis [n+1];
+    int dist [n+1];
+    for(int i = 0; i <= n; i++)
+    {
+        vis[i] = false;
+        dist[i]=0;
+    }
+    vis[x] = true;
+    dist[x] = 0;
+
+    queue<int> Q;
+    Q.push(x);
+
+    while (!Q.empty())
+    {
+        int cur = Q.front();
+        Q.pop();
+        for (int i = 0; i <a[cur].size(); i++)
+        {
+            if(!vis[a[cur].at(i)])
+            {
+                Q.push(a[cur].at(i));
+                vis[a[cur].at(i)] = true;
+                dist[a[cur].at(i)] = dist[cur] + 1;
+            }
+        }
+    }
+    if (vis[y]) cout << t*dist[y] << "\n";
+    else cout << "Not enough hallways! \n";
+
+}
+
+int main()
+{
+    cin >> n >> m >> t;
+
+    for (int i = 0; i< m; i++)
+    {
+        int x, y;
+        cin >> x >> y;
+        a[x].push_back(y);
+    }
+    cin >> q;
+    for (int i =0; i <q; i++)
+    {
+        int x, y;
+        cin >> x>> y;
+        BFS(x,y);
+    }
+}
