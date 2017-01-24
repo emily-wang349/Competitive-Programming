@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class dwitesep09p1 {
+
+	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
+
+		int times = 0;
+		while (times<5){
+		int n = input.nextInt();
+		int m = input.nextInt();
+
+		int count = 0;
+		int sum = 0;
+
+		for (int i = n; i <= m; i++) {
+			String a = Integer.toString(i);
+			int num = a.length();
+			sum = 0;
+			for (int j = 0; j < num; j++) {
+				sum += a.charAt(j) - '0';
+			}
+			if (sum % 2 != 0)
+				continue;
+			boolean check = true;
+			if (num > 1) {
+				for (int i1 = 0; i1 < num - 1; i1++) {
+					if ((a.charAt(i1 + 1) > a.charAt(i1) ))
+						continue;
+					else
+						check = false;
+				}
+				if (!check)
+					continue;
+			}
+			for (int i2 = 2; i2 < i; i2++) {
+				if (i2*i2>i)break;
+				else if (i % (i2*i2) == 0) {
+					check = false;
+				}
+			}
+			if (check) {
+				count++;
+			}
+		}
+		System.out.println(count);
+		times++;
+		}
+	}
+}
