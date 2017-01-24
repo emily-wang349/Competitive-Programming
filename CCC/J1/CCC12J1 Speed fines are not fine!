@@ -1,0 +1,22 @@
+import java.util.*;
+
+class ccc12j1 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args[]) {
+    
+  int speed = input.nextInt();
+  int limit = input.nextInt();
+  
+  if (limit<=speed)
+    System.out.println("Congratulations, you are within the speed limit!");
+  else if (limit>=speed && (limit-speed)<=20)
+    System.out.println("You are speeding and your fine is $100.");
+  else if (limit>=speed && (limit-speed)<=30)
+    System.out.println("You are speeding and your fine is $270.");
+  else
+    System.out.println("You are speeding and your fine is $500.");
+  
+     
+  }
+}
