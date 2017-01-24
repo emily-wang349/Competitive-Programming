@@ -1,0 +1,51 @@
+import java.util.*;
+
+class ccc07j3 {
+  
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[]) {
+    
+  int a = input.nextInt();
+  
+  int [] list = new int [a];
+  
+  for (int i=0; i<a; i++)
+    list [i] = input.nextInt();
+  int counter=0;
+  
+  int b = input.nextInt();
+  
+  for (int i=0; i<a; i++)
+  {
+    if (list [i]==1)
+      counter += 100;
+    else if (list [i]==2)
+      counter += 500;
+    else if (list [i]==3)
+      counter +=1000;
+    else if (list [i]==4)
+      counter +=5000;
+    else if(list [i]==5)
+      counter +=10000;
+    else if(list [i]==6)
+      counter +=25000;
+    else if(list [i]==7)
+      counter+=50000;
+    else if(list[i]==8)
+      counter+=100000;
+    else if(list[i]==9)
+      counter+=500000;
+    else if(list[i]==10)
+      counter+=1000000;
+  }
+  
+  int c = (1691600-counter)/(10-a);
+  
+  if (c>b)
+    System.out.println("no deal");
+  else if (b>c)
+    System.out.println("deal");
+  
+}
+}
