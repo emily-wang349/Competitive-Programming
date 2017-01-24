@@ -1,0 +1,30 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class fur4 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int n = input.nextInt();
+		int age[] =new int[n];
+		for (int i = 0; i<n; i++){
+			age[i] = input.nextInt();
+		}
+		
+		Arrays.sort(age);
+		
+		int Q = input.nextInt();
+		
+		int find [] = new int [Q];
+		
+		for (int i = 0; i<Q; i++){
+			find [i] = input.nextInt();
+		}
+		
+		for (int i = 0; i<Q; i++){
+			System.out.println(age[find[i]-1]);
+		}
+	}
+
+}
