@@ -1,0 +1,38 @@
+import java.util.*;
+public class p108ex7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner input = new Scanner (System.in);
+		
+		int n = input.nextInt();
+		
+		int c = 0;
+		int a;
+		
+		while (true){
+			a = input.nextInt();
+			
+			if (a>=0 && a<=30)
+				System.out.println("38");
+			else if (a>30 && a<=50)
+				System.out.println("55");
+			else if (a>50 && a<=100)
+				System.out.println(73);
+			else
+			{
+				int b = (a-100)%50;
+				if(b==0)
+					System.out.println(73+(a-100)/50*24);
+				else
+					System.out.println(73+((a-100)/50+1)*24);
+			}
+			
+			c++;
+			if (c==n)
+				break;
+		}
+	}
+
+}
