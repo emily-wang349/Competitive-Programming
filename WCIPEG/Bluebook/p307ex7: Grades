@@ -1,0 +1,35 @@
+import java.util.*;
+public class p307ex7 {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner (System.in);
+		
+		int n = input.nextInt();
+		
+		int c = 0;
+		
+		int a;
+		
+		while (true){
+			a = input.nextInt();
+			if (a<=100 && a>=80)
+				System.out.println("A");
+			else if (a<=79 && a>=70)
+				System.out.println("B");
+			else if (a>=60 && a<=69)
+				System.out.println("C");
+			else if (a>=50 && a<=59)
+				System.out.println("D");
+			else if (a>=0 && a<50)
+				System.out.println("F");
+			else
+				System.out.println("X");
+			c++;
+			if (c==n)
+				break;
+			
+			
+		}
+	}
+
+}
