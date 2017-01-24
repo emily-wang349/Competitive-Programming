@@ -1,0 +1,30 @@
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class fur3 {
+	
+	public static void main (String args[]){
+		
+		Scanner input =new Scanner (System.in);
+		
+		int n = input.nextInt();
+		
+		int size [] = new int [n];
+		
+		for (int i = 0; i<n; i++){
+			size[i] = input.nextInt();
+		}
+		
+		Arrays.sort(size);
+		DecimalFormat df = new DecimalFormat("#.0");
+		
+		
+		if (n%2==1){
+			System.out.println(df.format(size[n/2]));
+		}
+		else
+			System.out.println(df.format((double)(size[n/2]+size[n/2-1])/2));
+	}
+
+}
