@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n;
+int wait;
+int late;
+int main() {
+
+  ios::sync_with_stdio(false);
+    wait= 0;
+    late =0;
+    cin >>n;
+    string in;
+    while (in!="EOF"){
+      cin >>in;
+      if (in=="TAKE"){
+        n++;
+        wait++;
+        late++;
+      }
+      else if (in=="SERVE"){
+        wait--;
+      }
+      else if (in=="CLOSE"){
+        cout<<late<<" "<< wait<<" "<< n<<"\n";
+        late=0;
+        wait=0;
+      }
+      if (n==1000){
+        n=1;
+      }
+      }
+    }
