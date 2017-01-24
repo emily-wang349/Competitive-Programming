@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class p287ex5 {
+
+	public static void main(String[] args) {
+
+
+		Scanner input = new Scanner (System.in);
+		
+		int n = input.nextInt();
+		int c = 0;
+		int a;
+		while (true){
+			a = input.nextInt();
+			int b = String.valueOf(a).length();
+			if (a<0){
+				b--;
+				System.out.println(b);
+			}
+			else
+				System.out.println(b);
+			c++;
+			if (c==n)
+				break;
+		}
+
+	}
+
+}
