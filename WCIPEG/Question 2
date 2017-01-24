@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class q2 {
+	static Scanner input = new Scanner(System.in);
+
+	public static void main(String args[]) {
+		String n = input.nextLine();
+		n = n.toLowerCase();
+		int l = n.length();
+		int counter = 0, c = 0;
+		for (int i = 0; i < l; i++) {
+			if (n.charAt(i) == 'a')
+				counter++;
+		}
+		for (int i = 0; i < l; i++) {
+			if (n.charAt(i) == 'e' || n.charAt(i) == 'i' || n.charAt(i) == 'o' || n.charAt(i) == 'u')
+				c++;
+		}
+		if (counter >= c)
+			System.out.println("Advance to next round");
+		else
+			System.out.println("Does not advance to next round");
+	}
+}
