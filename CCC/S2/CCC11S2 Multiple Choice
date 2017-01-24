@@ -1,0 +1,31 @@
+import java.util.*;
+
+class ccc11s2 {
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+    int counter=0;
+    
+    int a = input.nextInt();
+    input.nextLine();
+    
+    String [] b = new String [a];
+    String [] c = new String [a];
+    
+    for (int i=0; i<a; i++)
+      b[i] = input.nextLine();
+    
+    
+    for (int i=0; i<a; i++)
+      c[i] = input.nextLine();
+    
+    for (int i=0; i<a; i++)
+    {
+      if (b[i].equals(c[i]))
+        counter++;
+    }
+    
+    System.out.println(counter);
+    
+  }
+}
