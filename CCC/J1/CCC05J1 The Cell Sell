@@ -1,0 +1,38 @@
+import java.util.*;
+
+class ccc05j1 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args [])
+  {
+    int  a, b, c;
+    a=input.nextInt();
+    b=input.nextInt();
+    c=input.nextInt();
+    int asum=0;
+    int bsum=0;
+    
+    if (a-100>0)
+      asum +=(a-100)*25;
+    
+    asum +=b*15;
+    asum +=c*20;
+    
+    System.out.println("Plan A costs "+asum+" cents");
+    
+    if (a-250>0)
+      bsum +=(a-250)*45;
+    bsum += b*35;
+    bsum += c*25;
+    
+    System.out.println("Plan B costs "+bsum+" cents");
+    
+    if (asum<bsum)
+      System.out.println("Plan A is cheapest.");
+    else if (bsum<asum)
+      System.out.println("Plan B is cheapest.");
+    else if (asum == bsum)
+      System.out.println("Plan A and B are the same price.");
+    
+  }
+}
