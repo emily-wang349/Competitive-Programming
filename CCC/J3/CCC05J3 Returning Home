@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class ccc05j3{
+  
+  public static void main(String args[]) {
+    
+    Scanner myScanner = new Scanner(System.in);
+   
+    String instructions [] = new String [10];
+    int counter=0;
+    for (int i=0; i<10; i++)
+    {
+      instructions [i] = myScanner.nextLine();
+      counter++;
+      if (instructions [i].equals("SCHOOL"))
+        break;
+    }
+    
+    for (int i=counter-1; i>0; i--)
+    {
+      if (instructions [i].equals("R"))
+        System.out.println("Turn LEFT onto "+instructions [i-1]+" street.");
+      else if (instructions [i].equals("L"))
+        System.out.println("Turn RIGHT onto "+instructions [i-1]+" street.");
+    }
+    if (instructions [0].equals("R"))
+      System.out.println("Turn LEFT into your HOME.");
+    else if (instructions [0].equals("L"))
+      System.out.println("Turn RIGHT into your HOME.");
+    
+      
+  }
+  
+}
