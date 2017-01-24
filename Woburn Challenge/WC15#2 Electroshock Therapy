@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class wc153j2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int N = input.nextInt();
+		int f[] = new int[N];
+
+		for (int i = 0; i < N; i++)
+			f[i] = input.nextInt();
+
+		int sum = 0;
+		for (int i = 0; i < N; i++) {
+			sum += 4 + (3 * (f[i] - 1));
+
+		}
+		for (int i = 0; i < N - 1; i++) {
+			if (f[i] < f[i + 1])
+				sum -= f[i];
+			else
+				sum-=f[i+1];
+		}
+		
+		System.out.println(sum);
+	}
+}
