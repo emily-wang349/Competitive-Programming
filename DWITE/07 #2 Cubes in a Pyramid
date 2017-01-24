@@ -1,0 +1,18 @@
+import java.util.*;
+public class dwiteoct07p2 {
+static Scanner input = new Scanner (System.in);
+	public static void main(String[] args) {
+		double a, b, c;
+		a = input.nextDouble();
+		b = input.nextDouble();
+		int x;
+		c = (a*a*b/3);
+		x = (int)c;
+		if (c%1>=0.5)
+			x++;
+		if (c<0.5 && c>0)
+			x++;
+		System.out.println(x);
+	}
+
+}
