@@ -1,0 +1,27 @@
+
+import java.util.*;
+import java.text.DecimalFormat;
+public class p84ex5 {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner (System.in);
+		
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+
+		DecimalFormat f = new DecimalFormat ("0.00");
+		if (a == 0&& b!=0)
+			System.out.println("undefined");
+		
+		else if (a == 0 && b==0)
+			System.out.println("indeterminate");
+		
+		
+		else{
+		double c = -b/a;
+		System.out.println(f.format(c));
+		}
+		
+	}
+
+}
