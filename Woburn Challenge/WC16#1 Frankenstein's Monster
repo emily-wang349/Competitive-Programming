@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class wc161j2 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		String n = s.nextLine();
+
+		if (n.length() > 12) {
+			for (int i = 0; i <= n.length() - 14; i++) {
+				if (n.substring(i, i + 14).equals(".Frankenstein.")) {
+					n = n.substring(0, i) + ".Frankenstein's.monster." + n.substring(i + 14, n.length());
+				}
+			}
+			if (n.substring(0, 13).equals("Frankenstein.")) {
+				n = "Frankenstein's.monster" + n.substring(12, n.length());
+			} if (n.substring(n.length() - 13, n.length()).equals(".Frankenstein"))
+				n = n.substring(0, n.length() - 12) + "Frankenstein's.monster";
+
+		} else if (n.equals("Frankenstein")) {
+			n = "Frankenstein's.monster";
+		}
+		System.out.println(n);
+	}
+
+}
