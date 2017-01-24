@@ -1,0 +1,30 @@
+import java.util.*;
+
+class ccc14j2 {
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+int n = input.nextInt();
+input.nextLine();
+String a =input.nextLine();
+
+int countera=0, counterb=0;
+
+for (int i=0; i<n; i++)
+{
+  if (a.charAt(i)=='A')
+  {
+    countera++;
+  }
+  if (a.charAt(i)=='B')
+    counterb++;
+}
+ if (countera>counterb)
+   System.out.println('A');
+ else if (counterb >countera)
+   System.out.println('B');
+ else
+    System.out.println("Tie");
+ 
+  }
+}
