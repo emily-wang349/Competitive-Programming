@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class avatarwater{
+  
+  public static void main(String args[]) {
+    
+    Scanner myScanner = new Scanner(System.in);
+  int a, b, c;
+  a= myScanner.nextInt();
+  b = myScanner.nextInt();
+  c = myScanner.nextInt();
+  
+  if (a>b && a>c)
+    System.out.println(a-b);
+  else if (b>c && b>a)
+    System.out.println(b-a);
+  else 
+    System.out.println(c-a);
+  
+ 
+   }
+
+}
