@@ -1,0 +1,33 @@
+import java.util.*;
+
+class ccc03j2 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args [])
+  {
+    
+    int a;
+    do
+    {
+      a = input.nextInt();
+      
+      if (a!=0)
+      {
+      int b = (int) Math.sqrt(a);
+      
+      while (true)
+      {
+        if (a%b==0)
+          break;
+        else
+          b--;
+      }
+      
+      int c = a/b;
+      int d = 2*(b+c);
+      
+      System.out.println("Minimum perimeter is "+d+" with dimensions "+b+" x "+c);
+      }
+    } while (a!=0);
+  }
+}
