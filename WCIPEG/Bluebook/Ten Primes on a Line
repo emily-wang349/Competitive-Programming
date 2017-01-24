@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class p156ex13 {
+
+	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
+
+		int n = input.nextInt();
+
+		int primestore[] = new int[n];
+		int num = 2;
+		int count = 0;
+		while (count != n)// while count!= number of prime numbers entered keep
+							// searching..
+		{
+			boolean prime = true;// to determine whether the number is prime or
+									// not
+			for (int i = 2; i <= Math.sqrt(num); i++)// efficiency matters
+			{
+				if (num % i == 0) {
+					prime = false;// if number divides any other number its not
+									// a prime so set prime to false and break
+									// the loop.
+					break;
+				}
+
+			}
+			if (prime) {
+				primestore[count] = num;
+				count++;
+			}
+			num++;// see if next number is prime or not.
+
+		}
+		for (int j = 0; j < n; j++){
+			System.out.print(primestore[j]+" ");
+			if ((j+1)%10==0){
+				System.out.println(" ");
+			}
+		}
+	}
+}
