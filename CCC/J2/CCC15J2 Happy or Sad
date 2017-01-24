@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class ccc15j2 {
+  public static void main (String args[]){
+    Scanner myScanner = new Scanner(System.in);
+    
+    String input;
+    input = myScanner.nextLine();
+    
+    int length = input.length();
+    int happy_counter=0, sad_counter=0;
+    
+    
+    for (int i=0; i<length-2; i++)
+    {
+      if (input.substring(i,i+3) .equals (":-)"))
+        happy_counter++;
+      
+      else if (input.substring(i,i+3) .equals (":-("))
+        sad_counter++;
+    }
+    
+    if (happy_counter==0 && sad_counter==0)
+      System.out.println("none");
+    else if (happy_counter == sad_counter)
+      System.out.println("unsure");
+    else if (happy_counter>sad_counter)
+      System.out.println("happy");
+    else if (sad_counter>happy_counter)
+      System.out.println("sad");
+    
+  }
+}
