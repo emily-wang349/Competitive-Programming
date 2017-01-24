@@ -1,0 +1,13 @@
+import java.util.*;
+class P118EX4 {
+  static Scanner input = new Scanner(System.in);
+  public static void main (String agrs[])
+  {
+    int a = input.nextInt();
+    
+    for (int i=1; i<=a; i++)
+    {
+      System.out.println(a+" X "+i+" = "+a*i);
+    }
+  }
+}
