@@ -1,0 +1,57 @@
+import java.util.*;
+
+class p156ex14{
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args[])
+  {
+    while (true)
+    {
+      int a = input.nextInt();       //get input of account number
+      if (a<0)                     //if account is - break loop
+        break;
+      int b = input.nextInt();       //get input of the initial and final readings
+      int c = input.nextInt();
+      int d = c-b;                   //get gas consumption during the month
+      
+      if (d<0)                       //if the meter rolled over get correct reading
+      {
+        d=10000-b+c;
+      }
+      
+      System.out.println("Account #: "+a);    //output the account number
+      
+ 
+      if (d<=10)
+        System.out.println("Bill: "+6.59);    //if used less than or equal to 10
+      
+      else if (d>10 && d<=30)                 //for the next 20 
+      {
+        double q = Math.round(((d-10)*0.2373+6.59)*100);
+        double p =q/100;
+        System.out.println("Bill: "+p);
+      }
+      
+      else if (d>30 && d<= 85)
+      {
+        double o = Math.round(((d-30)*0.2271+4.746+6.59)*100);
+        double u = o/100;
+        System.out.println("Bill: "+u);
+      }
+      
+      else if (d>85 && d<=170)
+      {
+        double i = Math.round(((d-85)*0.2178+12.4905+4.746+6.59)*100);
+        double k = i/100;
+        System.out.println("Bill: "+k);
+      }
+      
+      else if (d>170)
+      {
+        double l = Math.round(((d-170)*0.2085+18.513+12.4905+4.746+6.59)*100);
+        double m = l/100;
+        System.out.println("Bill: "+m);
+      }
+    }
+  }
+}
