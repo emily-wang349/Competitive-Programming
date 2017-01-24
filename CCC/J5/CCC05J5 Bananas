@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class ccc05j5 {
+
+	public static void main(String agrs[]) {
+		Scanner s = new Scanner(System.in);
+
+		while (true) {
+			String word = s.nextLine();
+			
+			if (word.equals("X"))
+				break;
+			else if (word.length()>=3){
+				boolean swap = true;
+				while (swap) {
+						swap = false;
+						for (int i = 0; i < word.length() - 2; i++) {
+							if (word.substring(i, i+3).equals("BAS") || word.substring(i, i + 3).equals("ANA")) {
+								word = word.replaceAll(word.substring(i, i + 3), "A");
+								swap = true;
+							}
+						}
+					}
+				}
+			if (word.equals("A")) {
+				System.out.println("YES");
+			} else
+				System.out.println("NO");
+		}
+	}
+}
