@@ -1,0 +1,71 @@
+import java.util.*;
+
+public class ccc16j4 {
+  static Scanner c = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    String q = c.nextLine();
+    
+    int d = (int) (q.charAt(0)-'0')*10;   //get tens digit 
+    int e = (int) (q.charAt(1)-'0');      // get ones digit of hour
+    int a =d+e;   //get the hour
+    int b = (int) (q.charAt(3)-'0')*10;   //get the min value
+    int c =0,f=0;
+    int t=0;
+    if(a>=5 && a<7)
+    {
+      c=(7-a)*60-b;
+      f=240-c*2;
+      if (f>180)
+      {
+        t = (f-180)/2;
+        f = 180;
+      }
+      b += f+c+t;
+    }
+    
+    else if(a>=7 && a<10)
+    {
+      c=(10-a)*60-b;
+      f=120-c/2;
+      b += f+c;
+    }
+    else if(a>=13 && a<15)
+    {
+      c=(15-a)*60-b;
+      f=240-c*2;
+      b += f+c;
+    }
+    else if(a>=15 && a<19)
+    {
+      c=(19-a)*60-b;
+      f= 120-c/2;
+      b += f+c;
+    }
+    else 
+      a+=2; //all other cases 2 hours 
+    
+    
+    //CHECK FOR ROUNDING//
+    if (b>=60)
+    {
+      a += b/60;
+      b = b%60;
+    }
+    
+    if (a>=24)
+      a -= 24;
+    
+    //PRINTING//
+    if (a<10 && b==0)
+      System.out.println("0"+a+":0"+b);
+    else if(a<10)
+      System.out.println("0"+a+":"+b);
+    else if(b==0)
+      System.out.println(a+":0"+b);
+    else
+      System.out.println(a+":"+b);
+    
+  }
+}
