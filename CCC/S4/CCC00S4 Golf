@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class ccc00s4 {
+
+	public static void main(String args[]) {
+		Scanner s = new Scanner(System.in);
+
+		int distance = s.nextInt();
+		int clubs = s.nextInt();
+
+		int[] meters = new int[clubs];
+
+		for (int i = 0; i < clubs; i++)
+			meters[i] = s.nextInt();
+		
+		int strokes[] = new int[distance + 1];
+
+		strokes[0] = 0;
+		int min = 0;
+		int t = 0;
+		for (int i = 1; i <= distance; i++) {
+
+			min = 999999999;
+			for (int j = 0; j < clubs; j++) {
+				t = i - meters[j];
+				if (t >= 0 && strokes[t] >= 0 && strokes[t] < min)
+					min = strokes[t];
+			}
+			if (min < 999999999)
+				strokes[i] = min + 1;
+			else
+				strokes[i] = -1;
+		}
+		if (strokes[distance] == -1)
+
+		{
+			System.out.println("Roberta acknowledges defeat.");
+
+		} else
+			System.out.println("Roberta wins in " + strokes[distance] + " strokes.");
+	}
+}
