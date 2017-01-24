@@ -1,0 +1,35 @@
+import java.util.*;
+
+class ccc04j3 {
+  static Scanner input = new Scanner (System.in);
+  
+  public static void main (String args [])
+  {
+    int n,m;
+    n=input.nextInt();
+    m=input.nextInt();
+    
+    String [] ad = new String [n];
+    String [] noun = new String [m];
+    
+    input.nextLine();
+    
+    for (int i=0; i<n; i++)
+    {
+      ad [i] = input.nextLine();
+    }
+    
+    for (int i=0; i<m; i++)
+    {
+      noun [i] = input.nextLine();
+    }
+   
+    for (int i=0; i<n; i++)
+    {
+      for (int j=0; j<m; j++)
+      {
+        System.out.println ( ad [i] + " as "+noun [j]);
+      }
+    }
+  }
+}
