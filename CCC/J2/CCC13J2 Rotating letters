@@ -1,0 +1,34 @@
+import java.util.*;
+
+class ccc13j2{
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+String a = input.nextLine();
+int b = a.length();
+int counter=0;
+
+for (int i=0; i<b; i++)
+{
+  if (a.charAt(i)=='O')
+    counter++;
+  else if (a.charAt(i)=='I')
+    counter++;
+  else if (a.charAt(i)=='S')
+    counter++;
+  else if (a.charAt(i)=='H')
+    counter++;
+  else if (a.charAt(i)=='Z')
+    counter++;
+  else if (a.charAt(i)=='X')
+    counter++;
+  else if (a.charAt(i)=='N')
+    counter++;
+}
+  if (counter==b)
+    System.out.println("YES");
+  else 
+    System.out.println("NO");
+  
+  }
+}
