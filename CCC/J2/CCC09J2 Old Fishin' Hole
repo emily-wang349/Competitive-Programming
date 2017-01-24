@@ -1,0 +1,95 @@
+import java.util.*;
+
+class ccc09j2 {
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[]) {
+    
+    int a, b, c, d;
+    a = input.nextInt();
+    b = input.nextInt();
+    c = input.nextInt();
+    d = input.nextInt();
+    int co = 0;
+    
+    for (int i=1; i<=d; i++)
+    {
+      if (a*i<=d)
+      {
+        System.out.println(i+" Brown Trout, 0 Northern Pike, 0 Yellow Pickerel");
+        co++;
+      }
+    }
+    
+    for (int i=1; i<=d; i++)
+    {
+      if (b*i<=d)
+      {
+        System.out.println("0 Brown Trout, "+i+" Northern Pike, 0 Yellow Pickerel");
+        co++;
+      }
+    }
+    
+    for (int i=1; i<=d; i++)
+    {
+      if (c*i<=d)
+      {
+        System.out.println("0 Brown Trout, 0 Northern Pike, "+i+ " Yellow Pickerel");
+        co++;
+      }
+    }
+    
+    for (int i=1; i<=d; i++)
+    {
+      for (int j=1; j<=d; j++)
+      {
+        if ((a*i+b*j)<=d)
+        {
+          System.out.println(i+" Brown Trout, "+j+" Northern Pike, 0 Yellow Pickerel");
+          co++;
+        }
+      }
+    }
+    
+    for (int i=1; i<=d; i++)
+    {
+      for (int j=1; j<=d; j++)
+      {
+        if ((b*i+c*j)<=d)
+        {
+          System.out.println("0 Brown Trout, "+i+" Northern Pike, "+j+" Yellow Pickerel");
+          co++;
+        }
+      }
+    }
+    
+        
+    for (int i=1; i<=d; i++)
+    {
+      for (int j=1; j<=d; j++)
+      {
+        if (a*i+c*j<=d)
+        {
+          System.out.println(i+" Brown Trout, 0 Northern Pike, "+j+" Yellow Pickerel");
+          co++;
+        }
+      }
+    }
+    for (int i=1; i<=d; i++)
+    {
+      for (int j=1; j<=d; j++)
+      {
+        for (int k=1; k<=d; k++)
+        {
+          if ((a*i+b*j+c*k)<=d)
+          {
+            System.out.println(i+" Brown Trout, "+j+" Northern Pike, "+k+" Yellow Pickerel");
+            co++;
+          }
+        }
+      }
+    }
+    
+    System.out.println("Number of ways to catch fish: "+co);
+  }
+}
