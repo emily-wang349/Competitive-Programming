@@ -1,0 +1,31 @@
+import java.util.*;
+import java.text.DecimalFormat;
+
+public class p171ex6a {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner input = new Scanner(System.in);
+
+		DecimalFormat f = new DecimalFormat("0.0000");
+
+		int n = input.nextInt();
+		Double[] a = new Double[n];
+
+		for (int i = 0; i < n; i++) {
+			a[i] = input.nextDouble();
+
+		}
+		double max = a[0];
+
+		for (int i = 0; i < n; i++) {
+			if (a[i] > max)
+				max = a[i];
+		}
+		String round = f.format(max);
+		System.out.println(round);
+
+	}
+
+}
