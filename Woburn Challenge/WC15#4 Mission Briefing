@@ -1,0 +1,39 @@
+import java.util.*;
+public class wc154j2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		String a =input.nextLine();
+		int c [] = new int [9];
+		
+		for (int i = 0; i<a.length()-2; i++){
+			if (a.substring(i, i+3).equals("001"))
+				c[0]++;
+			else if(a.substring(i, i+3).equals("002"))
+				c[1]++;
+			else if (a.substring(i, i+3).equals("003"))
+				c[2]++;
+			else if (a.substring(i, i+3).equals("004"))
+				c[3]++;
+			else if (a.substring(i, i+3).equals("005"))
+				c[4]++;
+			else if (a.substring(i, i+3).equals("006"))
+				c[5]++;
+			else if (a.substring(i, i+3).equals("007"))
+				c[6]++;
+			else if (a.substring(i, i+3).equals("008"))
+				c[7]++;
+			else if (a.substring(i, i+3).equals("009"))
+				c[8]++;
+		}
+		int d = 0;
+		for (int i = 0; i<9; i++){
+			if (c[i]!=0)
+				d++;
+		}
+		System.out.println(d);
+			
+		}
+		
+	}
