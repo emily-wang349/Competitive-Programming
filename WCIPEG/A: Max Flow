@@ -1,0 +1,26 @@
+import java.util.*;
+public class acmtryouts0a {
+
+	public static void main(String[] args) {
+		Scanner input =new Scanner (System.in);
+		
+		int n = input.nextInt();
+		
+		for (int i = 0; i<n; i++)
+		{
+			int a = input.nextInt();
+			int b []= new int [a];
+			for (int j = 0; j<a; j++){
+				b[j]=input.nextInt();
+			}
+			
+			int max = b[0];
+			for (int j = 0; j<a; j++){
+				if (max<b[j])
+					max = b[j];
+			}
+			System.out.println(max);
+		}
+	}
+
+}
