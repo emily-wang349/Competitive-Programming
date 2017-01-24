@@ -1,0 +1,48 @@
+import java.util.*;
+
+class ccc09j3 {
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+    int a = input.nextInt();
+    
+    System.out.println(a+" in Ottawa");
+    int v = a-300;
+    if (v>= 2400)
+      v = v-2400;
+    if (v<0)
+      v = v+2400;
+    
+    System.out.println(v+" in Victoria");
+    int e = a-200;
+    if (e>= 2400)
+      e = e-2400;
+    if (e<0)
+      e = e+2400;
+    System.out.println(e+" in Edmonton");
+    int w = a-100;
+    if (w>= 2400)
+      w = w- 2400;
+    if (w<0)
+      w = w+2400;
+    System.out.println(w+" in Winnipeg");
+    
+    System.out.println(a+" in Toronto");
+    
+    int h = a+100;
+    if (h>= 2400)
+      h = h- 2400;
+    if (h<0)
+      h = h+2400;
+    System.out.println(h+" in Halifax");
+    
+    int s = a+130;
+    if (s>= 2400)
+      s = s- 2400;
+    if (s<0)
+      s = s+2400;
+    if (s==275)
+    s=315;
+    System.out.println(s+" in St. John's");
+  }
+}
