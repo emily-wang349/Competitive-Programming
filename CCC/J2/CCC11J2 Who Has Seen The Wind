@@ -1,0 +1,29 @@
+import java.util.*;
+
+class ccc11j2 {
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    int a, b;
+    a= input.nextInt();
+    b = input.nextInt();
+    int counter =0;
+    double c [] = new double [b];
+    
+    for (int i=1; i<b; i++)
+    {
+      c [i] = -6*Math.pow(i,4)+a*Math.pow(i,3)+2*Math.pow(i,2)+i;
+      if (c[i]<=0 && counter==0)
+      {
+        System.out.println("The balloon first touches ground at hour:");
+        System.out.println(i);
+        counter++;
+      }
+      
+    }
+     if (counter==0)
+        System.out.println("The balloon does not touch ground in the given time.");
+  }
+}
+    
