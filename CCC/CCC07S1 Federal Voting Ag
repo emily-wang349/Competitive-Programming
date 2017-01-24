@@ -1,0 +1,40 @@
+import java.util.*;
+
+class ccc07s1 {
+  static Scanner input = new Scanner(System.in);
+  public static void main (String args[])
+  {
+    int n = input.nextInt();
+    int a[] = new int [n];
+    int b[] = new int [n];
+    int c[] = new int [n];
+    for (int i=0; i<n; i++)
+    {
+      a[i] = input.nextInt();
+      b [i] = input.nextInt();
+      c [i] = input.nextInt();
+    }
+    
+    for (int i=0; i<n; i++)
+    {
+      if (a [i] <1989)
+        System.out.println("Yes");
+      else if (a [i] == 1989)
+      {
+        if (b[i]>2)
+          System.out.println("No");
+        else if (b[i]==2)
+        {
+          if (c[i]<=27)
+            System.out.println("Yes");
+          else if (c[i]>27)
+            System.out.println("No");
+        }
+        else if (b[i]<2)
+             System.out.println("Yes");
+      }
+      else if (a[i]>1989)
+        System.out.println("No");
+    }
+  }
+}
