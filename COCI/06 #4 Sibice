@@ -1,0 +1,28 @@
+import java.util.*;
+
+class coci064p1 {
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    int ma, w, h;
+    ma = input.nextInt();
+    w = input.nextInt();
+    h = input.nextInt();
+    
+    int n [] = new int [ma];
+    
+    for (int i=0; i<ma; i++)
+      n [i] = input.nextInt();
+    
+    double a = Math.sqrt(w*w+h*h);
+    
+    for (int i=0; i<ma; i++)
+    {
+      if (n[i]<=a)
+        System.out.println("DA");
+      else
+        System.out.println("NE");
+    }
+  }
+}
