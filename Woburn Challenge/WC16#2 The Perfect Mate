@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int n;
+    cin >> n;
+    string name[n];
+    int win [n];
+    int lose [n];
+
+    for(int i =0; i<n; i++)
+    {
+        cin>> name [i] >> win [i] >> lose [i];
+        if (lose [i]!=0)
+        {
+            name [i] = "";
+            win [i] = 0;
+            i--;
+            n--;
+        }
+    }
+
+    int j, temp;
+    string t;
+    for (int i = 0; i < n; i++)
+    {
+        j = i;
+
+        while (j > 0 && win[j] > win[j-1])
+        {
+            temp = win[j];
+            win[j] = win[j-1];
+            win[j-1] = temp;
+            t = name[j];
+            name[j] = name[j-1];
+            name[j-1] = t;
+            j--;
+        }
+    }
+    if (name[0].compare("")==0){
+        cout <<"None";
+    }
+    else{
+        cout << name[0];
+    }
+}
