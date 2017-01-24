@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class wc153j1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int AB = input.nextInt();
+		int DB = input.nextInt();
+		
+		int AS = input.nextInt();
+		int DS = input.nextInt();
+		
+		if (AB>DS && DB>AS)
+			System.out.println("Batman");
+		else if (DS>AB && AS>DB)
+			System.out.println("Superman");
+		else
+			System.out.println("Inconclusive");
+		
+				
+	}
+
+}
