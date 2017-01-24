@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.Math;
+
+public class ccc08j3{
+  static Scanner input = new Scanner(System.in);
+  
+  public static void main (String args[])
+  {
+    String a = input.nextLine();
+    char b [][] = new char [][]{{'A','B','C','D','E','F'}, 
+      {'G','H','I','J','K','L'}, 
+      {'M','N','O','P','Q','R'},                
+      {'S','T','U','V','W','X'},                   
+      {'Y','Z',' ','-','.','0'}}; 
+    a+="0";
+    int x1=0, y1=0,x2,y2,totx=0,toty=0,tot=0; 
+    for (int i=0; i<a.length(); i++)
+    {
+      char t = a.charAt(i);
+      for (int j=0; j<5; j++)
+      {
+        for (int k=0; k<6; k++)
+        {
+          if (t== b [j][k])
+          {
+            x2=k;
+            y2=j;
+            totx += Math.abs(x2-x1);
+            toty +=Math.abs(y2-y1);
+            x1=x2;
+            y1=y2;
+          }
+        }
+      }
+      tot = totx+toty;
+    }        
+    System.out.println(tot);
+  }
+}
