@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class acmtryouts1a{
+  
+  public static void main(String args[]) {
+    
+    Scanner myScanner = new Scanner(System.in);
+ int n;
+ n=myScanner.nextInt();
+ String play [] = new String [n];
+ 
+ for (int i=0; i<n; i++)
+ {
+   play [i] = myScanner.nextLine();
+ }
+ 
+ for (int i=0; i<n; i++)
+ {
+   if (play [i] .equals ("Rock"))
+     System.out.println("Paper");
+   else if (play [i].equals("Paper"))
+     System.out.println("Scissors");
+   else if (play [i].equals("Scissors"))
+     System.out.println("Rock");
+   else if (play [i].equals("Fox"))
+   System.out.println("Foxen");
+   else if (play [i].equals("Foxen"))
+     break;
+ }
+ 
+   
+  }
+  
+}
