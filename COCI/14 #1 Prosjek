@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int a;
+int sum;
+int b [105];
+int main() {
+  cin >> a;
+  
+  for (int i = 0; i<a; i++){
+    cin >> b[i];
+  }
+  
+  sum = 0;
+  for (int i = 1; i<=a; i++){
+    
+    int c = i*b[i-1]-sum;
+    cout << c << " ";
+    sum +=c;
+    
+  }
+  
+    return 0;
+}
